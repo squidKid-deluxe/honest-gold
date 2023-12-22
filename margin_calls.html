@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <!-- MathJax imports for formatting equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+        type="text/javascript"
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <body class="subpage">
+        <h1>Margin Calls on the BitShares Blockchain: Mechanisms and Dynamics</h1>
+        <h2>Abstract:</h2>
+        <p>
+            This paper elucidates the intricate mechanics of margin calls on the BitShares
+            blockchain, focusing on the USD:BTS market and utilizing examples with HONEST.CNY,
+            HONEST.USD, etc. It provides clarity on what margin calls are, how they are initiated,
+            the calculation of call prices, and the nuances involved in their execution.
+        </p>
+        <h2>1. Introduction:</h2>
+        <p>
+            Margin calls play a pivotal role in maintaining stability and adherence to collateral
+            requirements in the BitShares ecosystem. This paper aims to demystify the mechanics
+            behind margin calls, shedding light on their significance in markets like HONEST.CNY:BTS
+            and HONEST.USD:BTS.
+        </p>
+        <h2>2. What is a Margin Call?</h2>
+        <p>
+            A margin call in BitShares compels a user to sell collateral, converting it into the
+            borrowed token to settle their position. In the HONEST.USD:BTS market, a margin call
+            equates to a bid order to buy HONEST.USD with BTS. It is triggered when the price surge
+            renders the user’s collateral insufficient, violating the BitShares market rules.
+        </p>
+        <h3>2.1. How is the Call Price Calculated?</h3>
+        <p>
+            The call price (CP) of a margin position relies on the Maintenance Collateral Ratio
+            (MCR), debt, and collateral:
+        </p>
+        <p>
+            $$<br />
+            \text{Call Price (CP)} = \frac{\text{Collateral}}{\text{Debt} \times \text{MCR}}<br />
+            $$
+        </p>
+        <h3>2.2. How is the Collateral Ratio (CR) Calculated?</h3>
+        <p>The collateral ratio (CR) is determined by the feed price (settlement price):</p>
+        <p>
+            $$<br />
+            \text{Collateral Ratio (CR)} = \frac{\frac{\text{Collateral}}{\text{Feed
+            Price}}}{\text{Debt}}<br />
+            $$
+        </p>
+        <h2>3. Execution Conditions:</h2>
+        <h3>3.1. When Will a Margin Call Happen?</h3>
+        <p>
+            Margin calls are contingent on the feed price being below the call price. The Squeeze
+            Protection Price (SQPP) and Squeeze Protection Ratio (SQPR) play crucial roles in
+            determining the conditions for executing a margin call. The SQPP is calculated as
+            follows:
+        </p>
+        <p>
+            $$<br />
+            \text{SQPP} = \text{Feed Price} \times \text{SQPR}<br />
+            $$
+        </p>
+        <h3>3.2. At What Price Will the Margin Call Execute?</h3>
+        <p>
+            The margin call executes within the range \([CP - SQPP]\). This introduces complexities
+            where execution may not occur at lower prices due to blocking sell orders.
+        </p>
+        <h2>4. Discussion:</h2>
+        <p>
+            The collateral ratio, SQPR, and MCR collectively determine the safety and timing of
+            margin calls. Ensuring a collateral ratio higher than \(MCR \times SQPR\) is essential
+            to avoid margin calls.
+        </p>
+        <h3>4.1. Consequences:</h3>
+        <h4>4.1.1. Asks Below the Call Price Prevent Margin Calls:</h4>
+        <p>
+            Margin calls only execute in the range \([CP - SQPP]\), hindering execution when there
+            are lower-priced sell orders.
+        </p>
+        <h4>4.1.2. Margin Calls Cannot “Buy Cheap”:</h4>
+        <p>
+            Forced margin calls consistently buy at a premium relative to the settlement price, even
+            if lower-priced sell orders are available.
+        </p>
+        <h2>5. Conclusion:</h2>
+        <p>
+            Margin calls are intricate processes within the BitShares blockchain, ensuring adherence
+            to collateral requirements and market stability. Understanding the interplay of
+            parameters like MCR, SQPR, and execution ranges is crucial for participants engaging in
+            leveraged positions with assets like HONEST.CNY and HONEST.USD.
+        </p>
+        <h2>6. References:</h2>
+        <p>
+            <a href="https://how.bitshares.works/en/master/bts_holders/dex_margin_mechanics.html">
+                Bitshares Docs: Margin Calls
+            </a>
+        </p>
+        <img id="enso" src="honest-enso.png" width="200px" />
+    </body>
+</html>

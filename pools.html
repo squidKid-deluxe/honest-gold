@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="main.css" rel="stylesheet" />
+	<!-- MathJax imports for formatting equations -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script
+		type="text/javascript"
+		id="MathJax-script"
+		async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+	></script>
+
+	<body class="subpage">
+		<h1>Understanding the Bitshares Liquidity Pool Protocol</h1>
+
+		<h3>Constant Product Liquidity Pool (x⋅y=k):</h3>
+
+		<p>
+			At the heart of the Bitshares Liquidity Pool Protocol lies the constant product formula:
+			<br />
+			\[ x \cdot y = k \]
+			<br />
+			This fundamental equation ensures that the product of the quantities of two assets
+			(denoted as \( x \) and \( y \)) in the liquidity pool remains constant. This design
+			allows for dynamic pricing and liquidity provision.
+			<br />
+			For instance, if you deposit 10 tokens of asset \( x \) and 20 tokens of asset \( y \),
+			the product \( 10 \cdot 20 = 200 \) must persist, adjusting as trades occur to maintain
+			equilibrium.
+		</p>
+
+		<h3>Owning \( k \) Shares:</h3>
+
+		<p>
+			When participants contribute assets to the Bitshares liquidity pool, they essentially
+			acquire \( k \) shares proportional to their contribution. Owning \( k \) shares
+			signifies holding an equivalent market value of both assets in the pool, exposing
+			liquidity providers to the market movements of both assets.
+		</p>
+
+		<h3>Fees and Earnings:</h3>
+
+		<p>
+			Bitshares charges a small fee for every trade executed on the platform. Liquidity
+			providers, those holding \( k \) shares, earn a share of these fees in proportion to
+			their ownership percentage in the pool. This mechanism incentivizes users to contribute
+			to liquidity and share in trading activity.
+		</p>
+
+		<h3>Withdrawal Fees:</h3>
+
+		<p>
+			In the Bitshares Liquidity Pool Protocol, a withdrawal fee is applied when a liquidity
+			provider decides to remove assets from the pool. This fee serves as a disincentive for
+			frequent or large withdrawals and helps maintain stability.
+			<br />
+			Importantly, the withdrawal fee collected does not go into the protocol's coffers but is
+			distributed among the remaining liquidity providers who still hold \( k \) shares. This
+			ensures that those who continue to provide liquidity are compensated for the potential
+			disruption caused by the withdrawal.
+			<br />
+			In conclusion, the Bitshares Liquidity Pool Protocol, with its constant product formula,
+			provides a robust and decentralized platform for trading and liquidity provision. Owning
+			\( k \) shares aligns participants with the dynamics of the pool, and the fee and
+			withdrawal structures contribute to the protocol's overall stability and sustainability.
+		</p>
+
+		<h3>Liquidity Pool Operations:</h3>
+
+		<p>
+			A liquidity pool operates via the constant product equation: \( X \cdot Y = K \); the
+			amount of \( X \) times the amount of \( Y \) will always equal the constant product \(
+			K \).
+		</p>
+
+		<p>There are four operations that can be performed at a pool:</p>
+		<ol>
+			<li>Give \( X \), get some pool-defined amount of \( Y \) in return.</li>
+			<li>Give \( Y \), get some pool-defined amount of \( X \) in return.</li>
+			<li>Give equal-valued amounts of \( X \) and \( Y \) to get \( K \) in return.</li>
+			<li>Give \( K \) and get equal-valued amounts of \( X \) and \( Y \) in return.</li>
+		</ol>
+
+		<p>
+			Suppose a pool has 100 shares of \( X \) and 200 shares of \( Y \), making \( K = 20000
+			\).
+		</p>
+<h3>Operation 1 - Alice:</h3>
+<p>
+Alice wants to add 1 share of \( X \) to the pool. She gets back:
+
+\[ Y_\text{new} = 200 - \frac{20000}{1 + 100} = 198.0198 \text{ shares of } Y \]
+</p>
+<h3>Operation 2 - Bob:</h3>
+
+<p>
+Bob wants to swap 100 shares of \( Y \) for \( X \). He gets:
+
+\[ X_\text{new} = 101 - \frac{20000}{100 + 198.0198} = 67.1096 \text{ shares of } X \]
+
+\[ Y_\text{new} = 100 + 198.0198 = 298.0198 \text{ shares of } Y \]
+
+</p>
+<h3>Operation 3 - Charlie:</h3>
+
+<p>
+Charlie wants to stake by contributing 10 shares of \( Y \) and \( 2.2519 \) shares of \( X \) at the current ratio.
+
+\[ X_\text{new} = 67.1096 + 2.2519 = 69.3615 \text{ shares of } X \]
+
+\[ Y_\text{new} = 298.0198 \times \frac{69.3615}{67.1096} = 308.0198 \text{ shares of } Y \]
+
+\[ K_\text{new} = 69.36 \text{X} \times 308.01 \text{Y} = 20671.09634 \text{ shares of } K\]
+
+</p>
+<h3>Operation 4 - Dave:</h3>
+<p>
+Dave wants to redeem 1 K share. He gives up 1 K and receives:
+
+\[ \text{Ratio of } 1 \text{ to } 20671 = 0.0004838\]
+
+\[ \text{Amount of } X_\text{redeemed} = 0.00004838 \times 69.3615 = 0.0034 \text{ shares of } X \]
+
+\[ \text{Amount of } Y_\text{redeemed} = 0.00004838 \times 308.0198 = 0.0149 \text{ shares of } Y \]</p>
+		<h3>References:</h3>
+		<ul>
+			<li>
+				<a href="https://docs.bitshares.build/docs/liquidity-pools/">
+					BitShares Documentation - Liquidity Pools
+				</a>
+			</li>
+		</ul>
+		<img id="enso" src="honest-enso.png" width="200px" />
+	</body>
+</html>

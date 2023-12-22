@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="main.css" rel="stylesheet" />
+	<body class="main">
+		<div class="tab">
+			<button id="home" class="tablinks" onclick="switch_tab(event, '1')">Home</button>
+			<button class="tablinks" onclick="switch_tab(event, '2')">HONEST</button>
+			<button class="tablinks" onclick="switch_tab(event, '3')">Margin Calls</button>
+			<button class="tablinks" onclick="switch_tab(event, '4')">Pools</button>
+			<button class="tablinks" onclick="switch_tab(event, '5')">MPAs</button>
+			<button class="tablinks" onclick="switch_tab(event, '6')">Short Selling</button>
+			<button class="tablinks" onclick="switch_tab(event, '7')">How To Profit</button>
+		</div>
+		<iframe id="1" class="tabcontent" src="introduction.html"></iframe>
+		<iframe id="2" class="tabcontent" src="morality.html"></iframe>
+		<iframe id="3" class="tabcontent" src="margin_calls.html"></iframe>
+		<iframe id="4" class="tabcontent" src="pools.html"></iframe>
+		<iframe id="5" class="tabcontent" src="mpas.html"></iframe>
+		<iframe id="6" class="tabcontent" src="shorting.html"></iframe>
+		<iframe id="7" class="tabcontent" src="profit.html"></iframe>
+	</body>
+	<script>
+		  	function switch_tab(evt, tab_id) {
+			var i, tabcontent, tablinks;
+
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			let elm = document.getElementById(tab_id)
+			elm.style.display = "block";
+			elm.style.backgroundImage="url(gold"+(Math.floor(Math.random() * 21)+1)+".jpg)";
+			try {
+				evt.currentTarget.className += " active";
+				evt.target.classList.toggle('transition');
+			}
+			catch{}
+		}
+		document.getElementById('home').click();
+	</script>
+</html>

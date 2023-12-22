@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <body class="subpage">
+        <h2>Profit Strategies with HONEST Tokens, BTS, and BitShares Financial Instruments</h2>
+        <h3>Abstract:</h3>
+        <br />
+        This technical paper explores advanced profit strategies using Market Pegged Assets (MPAs),
+        Short Selling, and Liquidity Pools on the BitShares Blockchain. Focusing on HONEST tokens
+        (e.g., HONEST.USD, HONEST.BTC) and BTS, this guide provides practical insights into
+        leveraging these financial instruments for profitable trading. Examples and strategies are
+        presented with a focus on simplicity for readers with minimal blockchain knowledge.
+        <h3>1. Introduction:</h3>
+        <br />
+        The BitShares Blockchain offers a unique financial ecosystem with various instruments for
+        traders seeking profit opportunities. This paper elucidates strategies involving HONEST
+        tokens, representing Market Pegged Assets, and BTS, the core token of the blockchain.
+        <h3>2. Market Pegged Assets (MPAs):</h3>
+        <h3>2.1 Understanding MPAs:</h3>
+        <br />
+        Market Pegged Assets (MPAs) on BitShares, including HONEST tokens, mimic the value of
+        real-world assets like fiat currencies or commodities. For example, HONEST.USD represents
+        the value of the US Dollar.
+        <h3>2.2 Profit Opportunities with MPAs:</h3>
+        <ul>
+            <li>
+                <strong>Long Positions:</strong> Invest in HONEST tokens anticipating an increase in
+                their value relative to BTS.
+                <ul>
+                    <li>
+                        <em>Example:</em> Purchase HONEST.USD when expecting the US Dollar to
+                        strengthen.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Short Positions:</strong> Borrow HONEST tokens to sell when anticipating a
+                decrease in their value, aiming to buy them back at a lower price.
+                <ul>
+                    <li>
+                        <em>Example:</em> Short HONEST.BTC if anticipating a Bitcoin price decline.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>3. Short Selling Including Short Tokens:</h3>
+        <p>
+            HONEST has introduced a new concept to Bitshares MPA’s. Tokens with Inverse Price Feed.
+        </p>
+        <p>
+            E.g. if HONEST.BTC is fed a price of BTC/BTS<br />
+            then HONEST.BTCSHORT is fed the inverse price of BTS/BTC
+        </p>
+        <h3>3.1 Short and Long Positions:</h3>
+        <p>
+            Short Position: Selling borrowed assets with the intention to repurchase them later at a
+            lower price.<br />
+            Long Position: Buying assets with the expectation that their value will increase.
+        </p>
+
+        <h3>3.2 Profit from Short Selling:</h3>
+        <p>
+            Example: Borrow HONEST.BTC, sell it for BTS, wait for the price to drop, repurchase
+            HONEST.BTC at a lower price, and return the borrowed amount, profiting from the price
+            difference.
+        </p>
+        <h3>3.3 Profit from Short Selling Short Tokens:</h3>
+        <p>
+            Short tokens are the inverse of their corresponding MPAs, reflecting a belief in the
+            devaluation of the underlying collateral asset.<br />
+            Example: Borrow HONEST.BTCSHORT and sell it for BTS, expecting the value of
+            HONEST.BTCSHORT to decrease relative to the BTS collateral. Repurchase HONEST.BTCSHORT
+            at a lower price to cover the short position.
+        </p>
+        <h3>3.4 Risks and Considerations:</h3>
+        <p>
+            Short selling short tokens involves anticipating an increase in the value of the
+            underlying asset.<br />
+            Traders should carefully assess market conditions and conduct thorough research before
+            engaging in short selling short tokens.
+        </p>
+        <h3>3.5 Short Token Feed Price Calculation:</h3>
+        <p>The feed prices for short tokens are generated inversely to their corresponding MPAs:</p>
+        <div class="code">edict[&quot;settlement_price&quot;] = 1 / feed if short, else feed</div>
+        <h3>3.7 Conclusion:</h3>
+        <p>
+            Integrating short selling short tokens into your trading strategy adds flexibility and
+            opportunities to profit from market movements.<br />
+            Traders should be aware of the additional complexities introduced by short tokens and
+            consider their risk tolerance and market analysis before engaging in short selling short
+            tokens.
+        </p>
+        <h3>4. Liquidity Pools:</h3>
+        <h3>4.1 Earning from Liquidity Pools:</h3>
+        <ul>
+            <li>
+                By staking BTS or HONEST tokens in a Liquidity Pool, traders earn a share of the
+                fees generated by the pool, providing a continuous profit stream.
+            </li>
+            <li>
+                <em>Example:</em> Stake BTS in the HONEST.USD:BTS Liquidity Pool, earning a
+                percentage of the fees generated from transactions in that pool.
+            </li>
+        </ul>
+        <h3>4.2 Combining MPAs and Liquidity Pools:</h3>
+        <ul>
+            <li>
+                Create Liquidity Pools using HONEST tokens to facilitate trading pairs and earn
+                fees.
+            </li>
+            <li>
+                <em>Example:</em> Create a Liquidity Pool with HONEST.USD and BTS, allowing users to
+                trade between them while earning fees for providing liquidity.
+            </li>
+        </ul>
+        <h3>5. Conclusion:</h3>
+        <br />
+        Understanding how to profit with MPAs, Short Selling, and Liquidity Pools on BitShares
+        involves strategically using HONEST tokens and BTS. By taking advantage of price movements,
+        engaging in short-selling opportunities, and participating in liquidity provision, traders
+        can enhance their profitability within the BitShares ecosystem.
+        <p>
+            <strong>Note:</strong> This paper assumes a basic understanding of trading concepts and
+            recommends thorough research and practice before implementing these strategies. Always
+            consider the risks associated with trading and blockchain investments.
+        </p>
+        <img id="enso" src="honest-enso.png" width="200px" />
+    </body>
+</html>

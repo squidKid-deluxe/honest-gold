@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <body class="subpage">
+        <h2>Short Selling on the BitShares Blockchain: Mechanisms and Applications</h2>
+        <h3>Abstract:</h3>
+        <p>
+            This paper provides a comprehensive exploration of short selling on the BitShares
+            blockchain, examining its functionality, procedures, and implications. Throughout the
+            discussion, examples like HONEST.CNY and HONEST.USD are used to illustrate key concepts.
+        </p>
+        <h3>1. Introduction:</h3>
+        <p>
+            Short selling is a strategic financial maneuver that enables participants on the
+            BitShares blockchain to increase exposure to BTS and provide liquidity to BitAssets such
+            as HONEST.CNY, HONEST.USD, and more. This paper elucidates the step-by-step process
+            involved in short selling, encompassing borrowing, margin calls, settlement, selling,
+            collateral ratio updates, and covering.
+        </p>
+        <h3>2. Short Selling Mechanisms:</h3>
+        <h3>2.1 Borrowing:</h3>
+        <p>
+            Participants can borrow BitAssets from the BitShares network by providing sufficient
+            collateral. The collateral ensures the stability of the borrowed assets and is subject
+            to key parameters, including the settlement price, maintenance collateral ratio (MCR),
+            maximum short squeeze ratio (MSQR), short squeeze protection (SQP), and call price (CP).
+        </p>
+        <h3>2.2 Margin Call:</h3>
+        <p>
+            The BitShares network has the capability to initiate margin calls on positions lacking
+            adequate collateral for their borrowed BitAssets. Margin calls occur when the highest
+            bid falls below the call price but exceeds SQP. In such cases, the margin position is
+            compelled to sell its collateral, with the proceeds used to buy back the borrowed
+            BitAsset and close the position.
+        </p>
+        <h3>2.3 Settlement:</h3>
+        <p>
+            Holders of any BitAsset can request settlement at a fair price, resulting in the closure
+            of borrow/short positions with the lowest collateral ratio. The collateral is sold to
+            complete the settlement, with a daily volume limit imposed to prevent exploitation.
+        </p>
+        <h3>2.4 Selling:</h3>
+        <p>
+            After borrowing BitAssets, users can sell them on corresponding markets at prices
+            determined by willing buyers, thereby completing the short-selling process.
+        </p>
+        <h3>2.5 Updating Collateral Ratio:</h3>
+        <p>
+            Short position holders can adjust their collateral ratio to adapt to market conditions.
+            Increasing the ratio locks additional BTS as collateral, while reducing it requires
+            repayment in the corresponding BitAsset to the network.
+        </p>
+        <h3>2.6 Covering:</h3>
+        <p>
+            To close a short position, participants must hold the borrowed BitAsset to return to the
+            BitShares network. The returned BitAssets are deducted from the supply, and the
+            collateral is released and returned to its owner.
+        </p>
+        <h3>3. Discussion:</h3>
+        <p>
+            Short sellers have the flexibility to choose their place in line for settlement, with a
+            2% daily settlement limit enforced by the committee. This precautionary measure gives
+            shorters 24 hours to add collateral in response to potential margin calls. Market
+            manipulation risks are addressed through the transparent nature of the process, allowing
+            both short and long participants equal opportunities to influence the market.
+        </p>
+        <h3>4. Conclusion:</h3>
+        <p>
+            Short selling on the BitShares blockchain, exemplified by tokens like HONEST.CNY and
+            HONEST.USD, presents a sophisticated mechanism for managing exposure to BTS and
+            enhancing liquidity. The outlined procedures ensure transparency, fair market practices,
+            and the prevention of undue market manipulation in the evolving landscape of
+            decentralized finance.
+        </p>
+        <h3>5. References:</h3>
+        <p>
+            <a href="https://how.bitshares.works/en/master/bts_holders/dex_short.html">
+                Bitshares Docs: Short Selling
+            </a>
+        </p>
+        <img id="enso" src="honest-enso.png" width="200px" />
+    </body>
+</html>

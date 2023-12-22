@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <body class="subpage">
+        <h2>
+            Market Pegged Assets (MPAs) on the BitShares Blockchain: Functionality and Mechanisms
+        </h2>
+        <h3>Abstract:</h3>
+        <p>
+            This paper provides an in-depth exploration of Market Pegged Assets (MPAs) on the
+            BitShares blockchain, focusing on their purpose, characteristics, and operational
+            mechanisms. The discussion emphasizes the general concept while replacing references to
+            assets like BitCNY and BitUSD with examples such as HONEST.CNY and HONEST.USD for
+            clarity.
+        </p>
+        <h3>1. Introduction:</h3>
+        <p>
+            Market Pegged Assets (MPAs) in the BitShares ecosystem are innovative digital assets
+            designed to maintain price parity with globally recognized currencies. Unlike
+            traditional User Issued Assets (UIAs), MPAs employ collateral and sophisticated market
+            mechanics to regulate their supply and demand.
+        </p>
+        <h3>2. Market Pegged Assets (MPAs):</h3>
+        <h3>2.1 Definition and Purpose:</h3>
+        <p>
+            MPAs are freely traded digital assets that track the value of conventional underlying
+            assets through Contracts for Difference (CFD). For instance, HONEST.CNY and HONEST.USD
+            mirror the value of the Chinese Yuan and the U.S. Dollar, respectively.
+        </p>
+        <h3>2.2 Collateralized Tokens (SmartCoins):</h3>
+        <p>
+            MPAs, also known as SmartCoins, ensure 100% or more of their value is backed by the
+            BitShares core currency (BTS). The collateralization system, implemented through smart
+            contracts, eliminates counterparty risk and allows conversion to BTS at any time.
+        </p>
+        <h3>2.3 Market Mechanics:</h3>
+        <p>
+            As a private business on the BitShares blockchain HONEST provides a feed indicating a
+            fair price for each MPA, known as the Settlement Price or Feed Price. This price is
+            crucial in triggering margin calls if collateral ratios fall below the minimum
+            requirement, currently set at 175% and subject to change by HONEST. The collateral from
+            positions facing margin calls is used to buy back debt, automatically closing the
+            position.
+        </p>
+        <h3>3. Operation of MPAs:</h3>
+        <h3>3.1 Creation and Collateralization:</h3>
+        <p>
+            To create an MPA like HONEST.CNY, a user puts collateral (e.g., BTS) into a smart
+            contract, initiating the issuance of the MPA. The collateral serves as security for the
+            MPA and is held until the user decides to reclaim it.
+        </p>
+        <h3>3.2 Supply and Collateral Adjustment:</h3>
+        <p>
+            Individual users of BitShares blockchain protocol dynamically adjusts the supply of MPAs
+            based on market demand by self issuing new tokens backed by collateral. Users can
+            increase their MPA supply by putting collateral into smart contracts, while decreasing
+            the supply involves returning the borrowed assets, releasing the collateral.
+        </p>
+        <h3>3.3 Margin Calls and Settlement:</h3>
+        <p>
+            If the value of an MPA rises significantly, reducing the collateral ratio, the
+            blockchain triggers Margin Calls. This process involves selling the collateral in the
+            market, buying back the MPA, closing the contract, and paying the remaining collateral
+            to the user.
+        </p>
+        <h3>4. Conclusion:</h3>
+        <p>
+            Market Pegged Assets on the BitShares blockchain, exemplified by tokens like HONEST.CNY
+            and HONEST.USD, showcase a sophisticated and decentralized approach to creating stable
+            digital assets. The combination of collateralization, market mechanics, and blockchain
+            protocols ensures the integrity and stability of these assets in a manner that is
+            resistant to censorship and counterparty risk.
+        </p>
+        <h3>5. References:</h3>
+        <p>
+            <a href="https://how.bitshares.works/en/master/bts_holders/tokens/mpa.html">
+                Bitshares Docs: MPAs
+            </a>
+        </p>
+        <img id="enso" src="honest-enso.png" width="200px" />
+    </body>
+</html>
